@@ -1,0 +1,31 @@
+<!-- base.htmlから内容を引き継ぐ -->
+{% extends 'base.html' %}
+{% block body %}
+    <div class="wrapper">
+        <div class="form_container">
+            <div class="form_title_header">
+                <div>品名</div>
+                <div>値段</div>
+                <div>個数</div>
+                <div>小計</div>
+            </div><!-- /.form_title_header -->
+
+            <!-- menuとcountをfor文で一つづつ取り出す -->
+            {% for menu,count in data %}
+                <div class="form_content">
+                    <div class="form_item">{{ menu.get_name() }}</div>
+                    <div class="form_item">{{ menu.get_price() }}円</div>
+                    <div class="form_item">{{ count }}個</div>
+                    <div class="form_item">{{ menu.getTotalPrice(count) }}円</div>
+                </div><!-- /.form_content -->
+            {% endfor %}
+        </div><!-- /.form_container -->
+
+        <div class="total">合計金額は、{{ total }}円です</div>
+
+        <div class="btn"><a href="/">戻る</a></div>
+    </div><!-- /.wrapper -->
+{% endblock %}
+
+
+

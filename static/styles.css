@@ -1,0 +1,77 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
+.btn {
+    min-height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.count_inp {
+    text-align: center;
+    height: 40px;
+    font-size: 20px;
+}
+.order {
+    width: 180px;
+    font-size: 26px;
+    cursor: pointer;
+}
+.item_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    width: 320px;
+}
+.item, .price {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.form_container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+}
+.form_content {
+    display: flex;
+    flex-direction: row;
+}
+
+.form_item {
+    width: 160px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+.form_content:nth-child(even) {
+    background: #cde4ff;
+}
+.total {
+    padding: 8px 19px;
+    margin: 2em 0;
+    color: #2c2c2f;
+    background: #cde4ff;
+    border-top: solid 5px #5989cf;
+    border-bottom: solid 5px #5989cf;
+}
+
+.form_title_header {
+    display: flex;
+    flex-direction: row;
+
+}
+.form_title_header > div {
+    width: 160px;
+    border: 1px solid #ddd;
+    text-align: center;
+}

@@ -1,0 +1,25 @@
+<!-- base.htmlから内容を引き継ぐ -->
+{% extends 'base.html' %}
+{% block body %}
+<body>
+    <div class="wrapper">
+        <!-- タイトルヘッダー -->
+    <div class="title"><img src="static\img\menu.png" width="280"></div><!-- /.title -->
+        <form method="post" action="{{ url_for('form')}}">
+            <div class="container">
+            {% for m in menu %}
+                <div class="item_container">
+                    <div class="image"><img src="{{ m.image }}" width="280" height="280"></div><!-- /.image -->
+                    <div class="item">{{ m.get_name() }}</div><!-- /.item -->
+                    <div class="price">{{ m.get_price() }}円</div><!-- /.price -->
+                    <div class="count"><input class="count_inp" type="text" value="0" name="count"></div><!-- /.count -->
+                </div><!-- /.item_container \-->
+            {%  endfor %}
+            </div><!-- /.container -->
+           
+            <div class="btn"><input class="order" type="submit" value="注文する"></div>
+        </form>
+    </div><!-- /.wrapper -->
+</body>
+{% endblock %}
+
